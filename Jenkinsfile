@@ -6,6 +6,6 @@ pipe.imageName = 'jenkins-maven-jdk8'
 pipe.majorVersion = 0
 pipe.minorVersion = 0
 pipe.repositories = [
-        'custenborder_docker': 'docker.custenborder.com/jcustenborder'
+        ['credential': 'custenborder_docker', 'registry': 'https://docker.custenborder.com', 'repository': 'jcustenborder']
 ]
 pipe.execute()
