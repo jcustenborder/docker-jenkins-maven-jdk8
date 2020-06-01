@@ -1,10 +1,12 @@
+
 FROM openjdk:8-jdk
 
 MAINTAINER jcustenborder@gmail.com
 
-ARG MAVEN_VERSION=3.6.3
-ARG DOCKER_COMPOSE_VERSION="1.25.5"
-ARG USER_HOME_DIR="/home/jenkins"
+ARG MAVEN_VERSION='3.6.3'
+ARG DOCKER_COMPOSE_VERSION='1.25.5'
+ARG USER_HOME_DIR='/home/jenkins'
+
 
 RUN groupadd -g 994 docker
 RUN useradd --uid 1000 -m -G docker jenkins
