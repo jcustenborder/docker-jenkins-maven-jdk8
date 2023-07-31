@@ -3,7 +3,7 @@ FROM openjdk:8-jdk
 
 MAINTAINER jcustenborder@gmail.com
 
-ARG MAVEN_VERSION='3.6.3'
+ARG MAVEN_VERSION='3.9.3'
 ARG DOCKER_COMPOSE_VERSION='1.25.5'
 ARG USER_HOME_DIR='/home/jenkins'
 
@@ -21,7 +21,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
-  && curl -fsSL http://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
+  && curl -fsSL http://dlcdn.apache.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
         | tar -xzC /usr/share/maven --strip-components=1 \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
